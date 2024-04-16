@@ -1,0 +1,16 @@
+package serialization_Deserialization;
+
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+public class DeSerial {
+	public static void main(String[] args) {
+		// de-serialization
+				FileInputStream fis = new FileInputStream("cc");
+				ObjectInputStream ois = new ObjectInputStream(fis);
+				
+				Student stud = (Student) ois.readObject();
+				stud.displayNmae();
+				System.out.println(stud.getName()+" "+stud.getEmail()+" "+stud.getAddress()+" "+stud.getAge());
+	}
+}

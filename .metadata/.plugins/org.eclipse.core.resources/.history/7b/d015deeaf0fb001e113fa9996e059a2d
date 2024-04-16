@@ -1,0 +1,44 @@
+package connection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.cj.xdevapi.PreparableStatement;
+
+public class DBConnection {
+	public static void main(String[] args) throws SQLException {
+		Connection connection = null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/gaurang";
+			String username = "admin";
+			String password = "Admin@123";
+			connection = DriverManager.getConnection(url, username, password);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException ex) {
+			// TODO Auto-generated catch block
+			ex.printStackTrace();
+		}
+		
+		String q = "insert into student values(5,'Parth',95)";
+		
+		PreparedStatement pst = connection.prepareStatement(q);
+		System.out.println("data inserted successfully");
+//			Statement st =connection.createStatement();
+//			ResultSet rs = st.executeQuery(q);
+//			while (rs.next()) {
+//				int id = rs.getInt("sid") ;
+//				String name = rs.getString("name");
+//				int marks = rs.getInt("marks") ;
+//				
+//				System.out.println("id : " + id +" name : "+name + " marks : "+marks);
+//			}
+		
+	}
+
+}

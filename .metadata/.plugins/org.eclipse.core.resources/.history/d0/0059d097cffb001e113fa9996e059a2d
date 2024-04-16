@@ -1,0 +1,47 @@
+package serialization_Deserialization;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class Serial {
+public static void main(String[] args) {
+	
+	Student s = new Student("Gaurang","gaurang@gmail.com",25,"ahmedabad");
+	
+	try {
+//		// serialization
+//		FileOutputStream fos = new FileOutputStream("cc");
+//		ObjectOutputStream oos = new ObjectOutputStream(fos);
+//		
+//		oos.writeObject(s);
+//		
+//		oos.close();
+//		fos.close();
+//		System.out.println("state transfer to ob");
+		
+		
+		// de-serialization
+		FileInputStream fis = new FileInputStream("cc");
+		ObjectInputStream ois = new ObjectInputStream(fis);
+		
+		Student stud = (Student) ois.readObject();
+		stud.displayNmae();
+		System.out.println(stud.getName()+" "+stud.getEmail()+" "+stud.getAddress()+" "+stud.getAge());
+		
+		
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+}

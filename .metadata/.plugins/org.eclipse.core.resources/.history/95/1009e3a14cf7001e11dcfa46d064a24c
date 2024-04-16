@@ -1,0 +1,11 @@
+package oopsConcept;
+class Student{
+	int roll;
+	String name;
+	
+}
+public class Constructor_Example {
+public static void main(String[] args) {
+	
+}
+}

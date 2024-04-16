@@ -1,0 +1,14 @@
+package recursion_Example;
+
+public class Power_Calculate {
+	public static int powerCalculate(int a,int b) {
+		if (b==0) {
+			return 1;
+		}
+		return a*powerCalculate(a, b-1);
+	}
+	public static void main(String[] args) {
+		
+		System.out.println(powerCalculate(2, 3));
+	}
+}

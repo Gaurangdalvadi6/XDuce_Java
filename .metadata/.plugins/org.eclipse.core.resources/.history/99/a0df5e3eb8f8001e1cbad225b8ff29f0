@@ -1,0 +1,33 @@
+package arrayList_Example;
+// array have fixed size where arraylist have dynamic size
+// array work with primitive data types as well as objects where arraylist use with object
+
+import java.util.ArrayList;
+
+public class ArrayList_Basics {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		ArrayList<String> slist = new ArrayList<String>();
+		// add operation
+		list.add(1);    //time O(1)
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		
+		System.out.println(list);
+		
+		
+		//get operation
+		int element = list.get(3);   //time O(1)
+		System.out.println(element);
+		
+		// remove or delete operation
+		list.remove(2);     //time O(n)
+		System.out.println(list);
+		
+		// set operation
+		list.set(1, 25);
+		System.out.println(list);
+	}
+}

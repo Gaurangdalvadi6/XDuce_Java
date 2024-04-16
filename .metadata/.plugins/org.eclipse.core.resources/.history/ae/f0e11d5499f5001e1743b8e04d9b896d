@@ -1,0 +1,18 @@
+package fuctionsAndMethods;
+
+public class BinaryToDecimal {
+	public static int binaryToDecimal(int n) {
+		int lastDigit=0;
+		int power = 0;
+		int number = 0;
+		while (n>0) {
+			lastDigit = n%10;
+			number = (int) (lastDigit*Math.pow(2, power));
+			power++;
+		}
+		return number;
+	}
+public static void main(String[] args) {
+	binaryToDecimal(101);
+}
+}

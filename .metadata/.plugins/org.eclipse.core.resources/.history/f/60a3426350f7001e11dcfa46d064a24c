@@ -1,0 +1,28 @@
+package oopsConcept;
+
+class Student {
+	int roll;
+	String name;
+
+	Student(){
+		this.roll=10;
+		this.name="Gaurang";
+	}
+	Student(String name) {
+		this.name = name;
+	}
+	Student(int rollN){
+		this.roll = rollN;
+	}
+}
+
+public class Constructor_Example {
+	public static void main(String[] args) {
+		Student s1 = new Student("Java");
+		s1.roll=5;
+		Student s2 = new Student(50);
+		System.out.println(s1.name);
+		System.out.println(s1.roll);
+		System.out.println(s2.roll);
+	}
+}

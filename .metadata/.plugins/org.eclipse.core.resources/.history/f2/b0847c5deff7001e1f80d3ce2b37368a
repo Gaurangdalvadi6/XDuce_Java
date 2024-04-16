@@ -1,0 +1,32 @@
+package oopsConcept;
+
+interface chessPlayer{
+	void moves();
+}
+
+class Queen implements chessPlayer{
+
+	@Override
+	public void moves() {
+		// TODO Auto-generated method stub
+		System.out.println("up,down,left,right,cross");
+	}
+}
+
+class Rook implements chessPlayer{
+
+	@Override
+	public void moves() {
+		// TODO Auto-generated method stub
+		System.out.println("rook goes left,right,up,down");
+	}
+}
+
+public class Interface_Example {
+public static void main(String[] args) {
+	Queen q = new Queen();
+	q.moves();
+	Rook r = new Rook();
+	r.moves();
+}
+}

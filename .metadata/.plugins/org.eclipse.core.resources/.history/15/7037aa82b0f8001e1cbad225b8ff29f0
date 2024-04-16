@@ -1,0 +1,6 @@
+package arrayList_Example;
+// array have fixed size where arraylist have dynamic size
+// array work with primitive data types where arraylist use with object
+public class ArrayList_Basics {
+
+}

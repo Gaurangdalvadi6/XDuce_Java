@@ -1,0 +1,21 @@
+package fuctionsAndMethods;
+
+public class DecimalToBinary {
+
+	public static int decimalToBinary(int n) {
+		int power = 0;
+		int lastDigit;
+		int binaryNumber = 0;
+		while (n > 0) {
+			lastDigit = n % 10;
+			binaryNumber = binaryNumber + (int) (lastDigit * Math.pow(10, power));
+			n = n / 10;
+			power++;
+		}
+		return binaryNumber;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(decimalToBinary(5));
+	}
+}

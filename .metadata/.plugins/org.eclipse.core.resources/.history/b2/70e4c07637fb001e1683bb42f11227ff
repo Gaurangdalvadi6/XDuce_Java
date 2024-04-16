@@ -1,0 +1,12 @@
+package collectionExample;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Student {
+
+	String name;
+	int rollNo;
+	
+	
+}

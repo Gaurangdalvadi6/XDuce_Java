@@ -1,0 +1,13 @@
+package fuctionsAndMethods;
+
+import java.util.Scanner;
+
+public class BinomialCoefficient {
+
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Find_Factorial.factorial(5);
+	}
+}

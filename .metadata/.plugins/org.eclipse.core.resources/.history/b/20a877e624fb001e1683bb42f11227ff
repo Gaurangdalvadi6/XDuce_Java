@@ -1,0 +1,17 @@
+package collectionExample;
+
+import java.util.Stack;
+
+public class StackExample {
+public static void main(String[] args) {
+	// it follow last in first out(LIFO)
+	
+	Stack<String> language = new Stack<String>();
+	language.add("Java");
+	language.add("Python");
+	language.add("Go");
+	language.add("Php");
+	
+	System.out.println(language);
+}
+}

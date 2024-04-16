@@ -1,0 +1,19 @@
+package fuctionsAndMethods;
+
+public class BinaryToDecimal {
+	public static int binaryToDecimal(int n) {
+		int lastDigit;
+		int power = 0;
+		int decimal = 0;
+		while (n > 0) {
+			lastDigit = n % 10;
+			decimal = (int) (decimal+(lastDigit * Math.pow(2, power)));
+			power++;
+		}
+		return decimal;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(binaryToDecimal(101));
+	}
+}

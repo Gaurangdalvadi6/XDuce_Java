@@ -1,0 +1,41 @@
+package oopsConcept;
+
+abstract class Animalss {
+	String color;
+	public Animalss() {
+		color = "Red";
+	}
+	void eat() {
+		System.out.println("Animal Eats...");
+	}
+
+	abstract void walk();
+}
+
+class Horse extends Animalss {
+	@Override
+	void walk() {
+		System.out.println("Horse have four legs");
+	}
+}
+
+class Duck extends Animalss {
+	@Override
+	void walk() {
+		// TODO Auto-generated method stub
+		System.out.println("Duck have two legs");
+	}
+}
+
+public class Abstract_Example {
+	public static void main(String[] args) {
+		Horse h = new Horse();
+		h.eat();
+		h.walk();
+		System.out.println(h.color);
+		
+		Duck d = new Duck();
+		d.eat();
+		d.walk();
+	}
+}

@@ -1,0 +1,17 @@
+package fuctionsAndMethods;
+
+public class Demo {
+	public static int sum(int a,int b) {
+		return a+b;
+	}
+	
+	public static int sum(float a,float b) {
+		return (int) (a+b);
+	}
+	
+	public static void main(String[] args) {
+		int c =sum(5.0f, 4.2f);
+		System.out.println(c);
+	
+}
+}

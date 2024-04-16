@@ -1,0 +1,11 @@
+package recursion_Example;
+
+public class Check_Array_Is_Sorted {
+
+	public static boolean isSorted(int arr[],int i) {
+		if (arr[i]>arr[i+1]) {
+			return false;
+		}
+		return isSorted(arr, i+1);
+	}
+}

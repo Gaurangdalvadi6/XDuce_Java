@@ -1,0 +1,15 @@
+package recursion_Example;
+
+public class Print_Number_In_Decresing_Order {
+	public static int printNumberDecreaseOrder(int n) {
+		System.out.print(n+" ");
+		if (n==1) {
+			return 1;
+		}
+		return printNumberDecreaseOrder(n-1);
+	}
+public static void main(String[] args) {
+	int n = 10;
+	printNumberDecreaseOrder(n);
+}
+}

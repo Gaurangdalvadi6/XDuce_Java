@@ -1,0 +1,16 @@
+package oopsConcept;
+
+class Student {
+	int roll;
+	String name;
+
+	Student() {
+		System.out.println("Constructor is called");
+	}
+}
+
+public class Constructor_Example {
+	public static void main(String[] args) {
+		Student s1 = new Student();
+	}
+}

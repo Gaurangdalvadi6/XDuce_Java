@@ -1,0 +1,9 @@
+package collectionExample;
+
+public class Student {
+
+	String name;
+	int rollNo;
+	
+	
+}

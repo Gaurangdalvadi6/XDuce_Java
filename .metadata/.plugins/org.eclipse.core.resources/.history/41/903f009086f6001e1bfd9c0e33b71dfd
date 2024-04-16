@@ -1,0 +1,22 @@
+package stringExample;
+
+import java.util.Scanner;
+
+public class StringBasics {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the String : ");
+		String str = " ";
+		System.out.println(str);
+		System.out.println(str.length());
+		//System.out.println(str.charAt(0));
+		System.out.println(str.endsWith("h"));
+		System.out.println(str.concat(" dalvadi"));
+		System.out.println(str.indexOf("r"));
+		System.out.println(str.contains("u"));
+		System.out.println(str.isBlank());
+		System.out.println(str);
+		
+
+	}
+}

@@ -1,0 +1,29 @@
+package recursion_Example;
+
+public class Power_Calculate {
+//	public static int powerCalculate(int x,int n) {
+//		if (n==0) {
+//			return 1;
+//		}
+//		return x*powerCalculate(x, n-1);
+//	}
+	
+	public static int optimizedPowerCalculate(int x,int n) {
+		if (n==0) {
+			return 1;
+		}
+		//int halfPower = optimizedPowerCalculate(x, n/2);
+		int halfPowerSq = optimizedPowerCalculate(x, n/2)*optimizedPowerCalculate(x, n/2);
+		if (n%2!=0) {
+			halfPowerSq = x*halfPowerSq;
+		}
+		
+		return halfPowerSq;
+	}
+	public static void main(String[] args) {
+		int a=3;int b=4;
+		long start = System.currentTimeMillis();
+		System.out.println(optimizedPowerCalculate(a, b));
+		System.out.print(System.currentTimeMillis()-start +" ");
+	}
+}

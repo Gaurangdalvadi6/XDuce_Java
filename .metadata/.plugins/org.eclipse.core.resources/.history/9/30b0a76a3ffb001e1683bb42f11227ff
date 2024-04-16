@@ -1,0 +1,12 @@
+package collectionExample;
+
+import java.util.Arrays;
+
+public class LearnArraysClass {
+public static void main(String[] args) {
+	int arr[] = {2,5,9,12,36,54,69};
+	
+	int binarySearch = Arrays.binarySearch(arr, 10);
+	System.out.println(binarySearch);
+}
+}
